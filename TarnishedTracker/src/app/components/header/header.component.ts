@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-header',
@@ -9,8 +11,12 @@ import { Input } from '@angular/core';
 export class HeaderComponent  implements OnInit {
   @Input() titulo: string = 'Título por defecto';
 
-  constructor() { }
+  constructor(private navCtrl:NavController) { }
 
   ngOnInit() {}
+
+  volver() {
+    this.navCtrl.back();
+  }
 
 }
