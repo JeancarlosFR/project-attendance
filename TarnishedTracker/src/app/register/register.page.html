@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+    <ion-buttons slot="end"></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="form-container">
+    <ion-card class="card-container" color="light">
+      <div class="logo-container">
+        <img src="assets/imgs/attendance-Logo.png" alt="Logo">
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="sendValues()">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input formControlName="nombre" matInput>
+          <mat-error *ngIf="form.get('nombre')?.invalid && form.get('nombre')?.touched">
+            <ng-container *ngIf="form.get('nombre')?.hasError('required')">
+              Campo Obligatorio
+            </ng-container>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Apellidos</mat-label>
+          <input formControlName="apellidos" matInput>
+          <mat-error *ngIf="form.get('apellidos')?.invalid && form.get('apellidos')?.touched">
+            <ng-container *ngIf="form.get('apellidos')?.hasError('required')">
+              Campo Obligatorio
+            </ng-container>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Correo electrónico</mat-label>
+          <input formControlName="correoUsuario" matInput>
+          <mat-error *ngIf="form.get('correoUsuario')?.invalid && form.get('correoUsuario')?.touched">
+            <ng-container *ngIf="form.get('correoUsuario')?.hasError('required')">
+              Campo Obligatorio
+            </ng-container>
+            <ng-container *ngIf="form.get('correoUsuario')?.hasError('email')">
+              Correo no válido
+            </ng-container>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Carrera</mat-label>
+          <input formControlName="carreraUsuario" matInput>
+          <mat-error *ngIf="form.get('carreraUsuario')?.invalid && form.get('carreraUsuario')?.touched">
+            <ng-container *ngIf="form.get('carreraUsuario')?.hasError('required')">
+              Campo Obligatorio
+            </ng-container>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Género</mat-label>
+          <mat-select formControlName="genero">
+            <mat-option value="masculino">Masculino</mat-option>
+            <mat-option value="femenino">Femenino</mat-option>
+            <mat-option value="no-decir">Prefiero no decir</mat-option>
+            <mat-option value="otro">Otro</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('genero')?.invalid && form.get('genero')?.touched">
+            <ng-container *ngIf="form.get('genero')?.hasError('required')">
+              Campo Obligatorio
+            </ng-container>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input formControlName="contrasena" matInput type="password">
+          <mat-error *ngIf="form.get('contrasena')?.invalid && form.get('contrasena')?.touched">
+            <ng-container *ngIf="form.get('contrasena')?.hasError('required')">
+              Campo Obligatorio
+            </ng-container>
+            <ng-container *ngIf="form.get('contrasena')?.hasError('minlength')">
+              Minimo 8 caracteres
+            </ng-container>
+          </mat-error>
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button class="custom-button" [disabled]="form.invalid">Registrarse</button>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>
+
+
