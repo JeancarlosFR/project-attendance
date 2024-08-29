@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { NavController } from '@ionic/angular';
 
 
 @Component({
@@ -23,6 +24,8 @@ export class RegisterPage implements OnInit {
 
     form: FormGroup;
     constructor(
+
+      private navCtrl: NavController,
 
       private fb: FormBuilder
     ) { 
@@ -51,7 +54,9 @@ export class RegisterPage implements OnInit {
       this.form.reset();
     }
 
-  
+    volver() {
+      this.navCtrl.back();
+    }
    
 
  

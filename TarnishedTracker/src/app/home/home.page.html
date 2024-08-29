@@ -20,16 +20,21 @@
             <div class="logo-container">
                 <img src="assets/imgs/attendance-Logo.png" alt="Logo">
               </div>
-            <ion-card-header>
-                
+            <ion-card-header> 
                 <ion-card-title>¡Bienvenido Tarnished!</ion-card-title>
             </ion-card-header>
-            <app-input></app-input>
-            <app-button mensaje="Iniciar Sesión" tipoBoton="stroked" url="/perfil"></app-button>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Usuario</mat-label>
+                <input [(ngModel)]="usuario" matInput  value="">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Contraseña</mat-label>
+                <input [(ngModel)]="pass" type="password" matInput placeholder="" value="">
+              </mat-form-field>
+            <button  (click)="ingresar()" class="stroked" mat-stroked-button>Iniciar Sesión</button> 
             <mat-divider></mat-divider>
-            <app-button mensaje="Registrarse" tipoBoton="flat" url="/register"></app-button><br>
+            <button class="flat" mat-flat-button routerLink="/register">Registarse</button> <br> <br> 
             <p routerLink="/perfil" id="Recuperar"><u>¿Olvidaste tu contraseña?</u></p>
-        </ion-card-content>
-    </ion-card>
 
 

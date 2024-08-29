@@ -19,7 +19,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {ReactiveFormsModule} from '@angular/forms';
 //MODULO BUTTON
 import {MatButtonModule} from '@angular/material/button';
-import { ButtonComponent } from "../components/button/button.component"; 
 
 
 
@@ -32,7 +31,7 @@ import { ButtonComponent } from "../components/button/button.component";
     RegisterPageRoutingModule,
     MatFormFieldModule, MatInputModule, MatSelectModule,
     MatButtonModule,
-    ButtonComponent,
+    
     ReactiveFormsModule,
 ],
   declarations: [RegisterPage]

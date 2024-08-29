@@ -69,3 +69,30 @@ mat-divider{
   color: #fff;
   text-align: center;
 }
+
+.stroked{
+  width: 100%;
+  background-color: white;
+
+}
+.flat{
+  width: 100%;
+
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.custom-toast {
+  background-color: red;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+}
