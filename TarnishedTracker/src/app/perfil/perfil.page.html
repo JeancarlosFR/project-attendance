@@ -17,8 +17,36 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header class="titulo-perfil">
+      <ion-card-title>Perfil</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div class="avatar-container">
+        <ion-avatar aria-hidden="true" slot="start">
+          <img alt="" src="assets/imgs/Foto_perfil.png" />
+        </ion-avatar>
+      </div>
+      <h6>Camila Rodriguez</h6>
+      <p>Analista Programador Computacional</p>
+      <p>ca.rodriguez&duocuc.cl</p>
+      <div class="list-container">
+
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>80%<br>Asistencia</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+      
+    </ion-card-content>
+  </ion-card>
+
+  <section>
+    <div class="example-button-row">
+      <button class="stroked" mat-stroked-button>Historial de asistencia</button> 
+      <button class="flat" mat-stroked-button>Marcar Asistencia</button>  
+    </div>
+  </section>
 </ion-content>

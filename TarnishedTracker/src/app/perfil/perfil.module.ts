@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from './../components/components.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -15,7 +20,12 @@ import { PerfilPage } from './perfil.page';
     FormsModule,
     IonicModule,
     PerfilPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    MatGridListModule,
+    MatDividerModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule
   ],
   declarations: [PerfilPage]
 })

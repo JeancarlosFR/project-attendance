@@ -1,0 +1,51 @@
+ion-card{
+    height: 65%;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+ion-avatar{
+    width: 100px;
+    height: 100px;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+}
+
+.titulo-perfil{
+    text-align: center;
+}
+
+mat-grid-tile {
+    background: #005CBB;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    
+}
+
+mat-grid-list{
+    margin-top: 10px;
+}
+
+.stroked{
+    font-size: 14px;
+    width: 50%;
+    background-color: white;
+  
+  }
+  .flat{
+    width: 50%;
+  
+  }
+  .avatar-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+}
