@@ -1,8 +1,11 @@
-ion-card{
-    height: 65%;
-    border-radius: 10px;
+#card-perfil {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
     text-align: center;
-    color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 ion-avatar{
@@ -12,40 +15,63 @@ ion-avatar{
 
 .avatar-container {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .titulo-perfil{
     text-align: center;
 }
 
-mat-grid-tile {
-    background: #005CBB;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    
-}
-
-mat-grid-list{
-    margin-top: 10px;
-}
-
 .stroked{
     font-size: 14px;
     width: 50%;
-    background-color: white;
   
-  }
-  .flat{
-    width: 50%;
-  
-  }
-  .avatar-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100%;
 }
+
+.flat{
+    width: 50%;
+    margin-top: 10px;
+}
+
+
+.botones-perfil{
+    text-align: center;
+}
+
+.lista-perfil {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+p{
+    padding: 5px;
+    margin-left: 5%;
+}
+
+.icon-square {
+    width: 20px;  /* Ajusta el tamaño del cuadrado */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;  /* Borde redondeado */
+    margin-right: 5px;
+  }
+  
+ 
+
+  .icon-square svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--icon-color, #333); /* Por defecto para tema claro */
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .icon-square svg {
+      stroke: #fff; /* Color blanco para tema oscuro */
+    }
+  }

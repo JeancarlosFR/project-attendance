@@ -8,6 +8,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatRippleModule} from '@angular/material/core';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -27,7 +28,8 @@ import { PerfilPage } from './perfil.page';
     MatListModule,
     MatIconModule,
     MatButtonModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatRippleModule
   ],
   declarations: [PerfilPage]
 })

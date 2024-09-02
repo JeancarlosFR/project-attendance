@@ -37,3 +37,21 @@
 @import "@ionic/angular/css/palettes/dark.system.css";
 @import '~@angular/material/prebuilt-themes/azure-blue.css';
 
+/* Tema claro */
+:root {
+    --ion-background-color: #ffffff; /* Fondo claro */
+  --ion-text-color: #000000; /* Texto oscuro */
+  --ion-item-background: #f8f8f8; /* Fondo de los items */
+  --ion-item-text-color: #000000; /* Texto de los items */
+    /* Otros colores personalizados para tema claro */
+  }
+  
+  /* Tema oscuro */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ion-background-color: #000000;
+      --ion-text-color: #ffffff;
+      /* Otros colores personalizados para tema oscuro */
+    }
+  }
+  
