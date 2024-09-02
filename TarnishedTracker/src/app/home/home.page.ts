@@ -24,7 +24,7 @@ export class HomePage {
 
   async ingresar() {
     if (this.usuario === 'admin' && this.pass === '1234') {
-      this.NavController.navigateForward('/perfil');
+      this.NavController.navigateForward('/inicio');
     } else {
         const toast = await this.toastController.create({
         message: 'Usuario o contraseña incorrecta',

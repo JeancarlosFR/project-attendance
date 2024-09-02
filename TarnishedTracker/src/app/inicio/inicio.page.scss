@@ -1,0 +1,106 @@
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  padding: 0 1rem; /* Ajuste de padding para evitar que el contenido toque los bordes */
+}
+
+#card-perfil {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  padding: 1.5rem; 
+  border-radius: 1rem; 
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.avatar-container {
+  margin-bottom: 4rem; /* Espacio entre la imagen y los botones */
+}
+
+ion-avatar img {
+  width: 6rem; 
+  height: 6rem;
+  border-radius: 50%; /* Asegura que la imagen sea redonda */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  width: 100%;
+}
+
+button.profile-button,
+button.scan-button,
+button.exit-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem; 
+  background-color: rgb(24, 119, 242); 
+  color: #ffffff; 
+  border-radius: 5rem; 
+  font-size: 1rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s; 
+  border: none; 
+}
+
+button.profile-button:active,
+button.scan-button:active,
+button.exit-button:active {
+  background-color: #00328a; /* Color de fondo cuando el botón está presionado */
+  color: white; /* Color del texto cuando el botón está presionado */
+}
+
+button.profile-button .icon,
+button.scan-button .icon,
+button.exit-button .icon {
+  margin-right: 0.5rem;
+  width: 1.5rem; /* Tamaño del icono */
+  height: 1.5rem; /* Tamaño del icono */
+}
+
+/* Asegurarte de que los íconos SVG no sean demasiado grandes */
+button.profile-button svg,
+button.scan-button svg,
+button.exit-button svg {
+  width: 1.5rem; /* Tamaño del ícono */
+  height: 1.5rem; /* Tamaño del ícono */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+  #card-perfil {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  button.profile-button,
+  button.scan-button,
+  button.exit-button {
+    font-size: 0.9rem; /* Tamaño del texto más pequeño para pantallas pequeñas */
+  }
+
+  button.profile-button .icon,
+  button.scan-button .icon,
+  button.exit-button .icon {
+    width: 1.2rem; /* Tamaño del icono más pequeño para pantallas pequeñas */
+    height: 1.2rem; /* Tamaño del icono más pequeño para pantallas pequeñas */
+  }
+}
+
