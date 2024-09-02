@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        TarnishedTracker
+      </ion-title>
+      <ion-buttons slot="end">
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content color="light"[fullscreen]="true">
+    
+    <ion-card class="card-container">
+        
+        <ion-card-content>
+            <div class="logo-container">
+                <img src="assets/imgs/attendance-Logo.png" alt="Logo">
+              </div>
+            <ion-card-header> 
+                <ion-card-title>¡Bienvenido Tarnished!</ion-card-title>
+            </ion-card-header>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Usuario</mat-label>
+                <input [(ngModel)]="usuario" matInput  value="">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Contraseña</mat-label>
+                <input [(ngModel)]="pass" type="password" matInput placeholder="" value="">
+              </mat-form-field>
+            <button  (click)="ingresar()" class="stroked" mat-stroked-button>Iniciar Sesión</button> 
+            <mat-divider></mat-divider>
+            <button class="flat" mat-flat-button routerLink="/register">Registarse</button> <br> <br> 
+            <p routerLink="/perfil" id="Recuperar"><u>¿Olvidaste tu contraseña?</u></p>
+
+
