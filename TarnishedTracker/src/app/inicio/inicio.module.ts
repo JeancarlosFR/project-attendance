@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { InicioPageRoutingModule } from './inicio-routing.module';
 import { InicioPage } from './inicio.page';
+import { MatDivider } from '@angular/material/divider';
 
 // Importaciones de Angular Material
 import { MatCardModule } from '@angular/material/card';
@@ -16,10 +17,10 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     IonicModule,
     InicioPageRoutingModule,
-    // Agregamos los módulos de Angular Material aquí
     MatCardModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDivider
   ],
   declarations: [InicioPage]
 })

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatDivider } from '@angular/material/divider';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -20,6 +21,7 @@ import { AttendancePage } from './attendance.page';
     FormsModule,
     IonicModule,
     AttendancePageRoutingModule,
+    MatDivider
     
     
   ],

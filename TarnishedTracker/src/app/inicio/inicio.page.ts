@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,inject } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { MenuController } from '@ionic/angular';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -7,22 +8,23 @@ import { NavController } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
 
-  constructor(
+  NavController = inject(NavController);
+  menuCtrl = inject(MenuController);
 
-    private navCtrl: NavController,
-
-  ) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
   volver() {
-    this.navCtrl.back();
+    this.NavController.back();
   }
 
-  
-
-
+  closeMenu() {
+    this.menuCtrl.close();
+  }
 }
+
+
 
 

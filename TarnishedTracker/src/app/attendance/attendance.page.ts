@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Component, OnInit, inject } from '@angular/core';
+import { NavController, MenuController } from '@ionic/angular';
 
 
 
@@ -11,18 +11,21 @@ import { NavController } from '@ionic/angular';
 })
 export class AttendancePage implements OnInit {
 
-  
+  NavController = inject(NavController);
+  MenuController = inject(MenuController);
 
-  constructor(private navCtrl: NavController,) { }
+  constructor() { }
 
   ngOnInit() { }
 
   volver() {
-    this.navCtrl.back();
+    this.NavController.back();
   }
 
+  closeMenu() {
+    this.MenuController.close();
+  }
 
-  
   
 }
 

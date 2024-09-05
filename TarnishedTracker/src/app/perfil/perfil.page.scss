@@ -48,7 +48,6 @@ ion-avatar{
 }
 
 p{
-    padding: 5px;
     margin-left: 5%;
 }
 
@@ -75,3 +74,12 @@ p{
       stroke: #fff; /* Color blanco para tema oscuro */
     }
   }
+
+  ion-menu-button {
+    z-index: 10;
+    pointer-events: auto;
+  }
+
+.menu-list{
+    border-radius: 10px;
+}
