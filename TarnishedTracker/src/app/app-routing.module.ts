@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'attendance',
     loadChildren: () => import('./attendance/attendance.module').then( m => m.AttendancePageModule)
-  }
+  },
+
 
 ];
 

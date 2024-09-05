@@ -54,7 +54,7 @@
       /* Otros colores personalizados para tema oscuro */
     }
   }
-
+  
   :root {
     --ion-color-blue: #1877f2;
     --ion-color-blue-rgb: 24, 119, 242;
@@ -76,5 +76,3 @@
   div[slot='content'] {
     background: rgba(var(--ion-color-blue-rgb), 0.25);
   }
-  
-  
