@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'attendance',
     loadChildren: () => import('./attendance/attendance.module').then( m => m.AttendancePageModule)
+  },  {
+    path: 'scanner-qr',
+    loadChildren: () => import('./scanner-qr/scanner-qr.module').then( m => m.ScannerQrPageModule)
   },
+
 
 
 ];
