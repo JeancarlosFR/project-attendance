@@ -25,6 +25,18 @@ export class InicioPage implements OnInit {
     this.navCtrl.navigateForward('/perfil'); 
 
   }
+
+  asistencia() {
+    
+    this.navCtrl.navigateForward('/attendance'); 
+
+  }
+
+  salir() {
+    
+    this.navCtrl.navigateForward('/home'); 
+
+  }
 }
 
 
