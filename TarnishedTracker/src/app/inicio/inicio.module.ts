@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { InicioPageRoutingModule } from './inicio-routing.module';
 import { InicioPage } from './inicio.page';
-import { MatDivider } from '@angular/material/divider';
 
 // Importaciones de Angular Material
+import { MatDivider } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';

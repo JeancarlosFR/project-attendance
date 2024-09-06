@@ -1,11 +1,11 @@
-<ion-menu side="end" contentId="main-content">
+<ion-menu  side="end" contentId="main-content">
   <ion-header>
     <ion-toolbar>
       
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
+  <ion-content  class="ion-padding">
     <ion-list class="menu-list">
       <ion-item (click)="closeMenu()" routerLink="/perfil">
         <ion-label>Perfil</ion-label>
@@ -37,7 +37,7 @@
   </ion-header>
   <ion-content>
 
-    <ion-card id="card-perfil">
+    <ion-card  id="card-perfil">
       <ion-card-header class="titulo-perfil">
         <ion-card-title></ion-card-title>
       </ion-card-header>
@@ -48,16 +48,16 @@
             <img alt="" src="assets/imgs/attendance-Logo.png" />
           </ion-avatar>
         </div>
-        <h6>¡Bienvenida!</h6>
+        <h6 >¡Bienvenida!</h6>
         <h6>Camila Rodriguez</h6> 
       </ion-card-content>
     </ion-card>
   
-    <ion-card id="card-buttons">
+    <ion-card  id="card-buttons">
   
       <div class="button-container">
   
-        <ion-button routerLink="/perfil" class="button-card" expand="block">
+        <ion-button  routerLink="/perfil" class="button-card" expand="block">
           <div class="button-content">
             Mi Perfil
           </div>
@@ -93,39 +93,18 @@
           </div>
         </ion-button>
   
-        <ion-button routerLink="/home" class="button-card" expand="block">
+        <ion-button  (click)="cerrarSesion()"  class="button-card" expand="block">
           <div class="button-content">
-            
             <div>
               Cerrar Sesion
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="icon">
+            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="icon">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
-            </svg>
-            
+            </svg>   
           </div>
         </ion-button>
-  
-  
-  
-  
       </div>
-  
     </ion-card>
-      
-  
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
   </ion-content>
 </div>
 
