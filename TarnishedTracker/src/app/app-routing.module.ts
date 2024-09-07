@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'scanner-qr',
     loadChildren: () => import('./scanner-qr/scanner-qr.module').then( m => m.ScannerQrPageModule)
   },
+  {
+    path: 'password-recovery',
+    loadChildren: () => import('./password-recovery/password-recovery.module').then( m => m.PasswordRecoveryPageModule)
+  },
 
 
 

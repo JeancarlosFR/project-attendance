@@ -1,4 +1,4 @@
-<ion-menu side="end" contentId="contenido-principal">
+<ion-menu menuId="perfilMenu" side="end" contentId="contenido-principal">
   <ion-header>
     <ion-toolbar>
       <ion-title>Menu</ion-title>
@@ -26,10 +26,10 @@
     <ion-toolbar>
       <ion-title>Mi perfil</ion-title>
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="/inicio" (click)="volver()"></ion-back-button>
+        <ion-back-button defaultHref="/" ></ion-back-button>
       </ion-buttons>
       <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
+        <ion-menu-button menu="perfilMenu"></ion-menu-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
