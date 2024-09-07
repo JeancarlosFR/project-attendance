@@ -25,8 +25,9 @@ export class AgregarNuevaTareaPage implements OnInit {
   ngOnInit() {
   }
 
-  async closed(){
-    await this.modalCtrl.dismiss(this.taskObject)
+  async closed() {
+    // Verifica que taskObject tiene los datos correctos antes de cerrarse
+    await this.modalCtrl.dismiss(this.taskObject);
   }
 
 
@@ -34,12 +35,18 @@ export class AgregarNuevaTareaPage implements OnInit {
     this.categoriaTarea = this.categorias[index]
   }
 
-  addTarea(){
+ // Métodos en AgregarNuevaTareaPage
+addTarea() {
+  // Se asegura de que las propiedades estén definidas correctamente
+  this.taskObject = {
+    nombreItem: this.nombreTarea,
+    fechaItem: this.fechaTarea,
+    prioridadItem: this.prioridadTarea,
+    categoriaItem: this.categoriaTarea,
+  };
 
-    this.taskObject=({nombreItem:this.nombreTarea, fechaItem:this.fechaTarea, prioridadItem:this.prioridadTarea, 
-                      categoriaItem:this.categoriaTarea})
-    
-    this.closed()
+  // Se cierra el modal y se envía el objeto taskObject
+  this.closed();
+}
 
-  }
 }

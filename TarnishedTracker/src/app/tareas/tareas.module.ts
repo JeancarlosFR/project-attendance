@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatDivider } from '@angular/material/divider';
+
 
 import { IonicModule } from '@ionic/angular';
 
@@ -13,7 +15,8 @@ import { TareasPage } from './tareas.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    TareasPageRoutingModule
+    TareasPageRoutingModule,
+    MatDivider
   ],
   declarations: [TareasPage]
 })

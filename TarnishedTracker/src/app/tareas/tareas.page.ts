@@ -1,16 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AgregarNuevaTareaPageModule } from '../agregar-nueva-tarea/agregar-nueva-tarea.module';
 import { AgregarNuevaTareaPage } from '../agregar-nueva-tarea/agregar-nueva-tarea.page';
+import { MenuController } from '@ionic/angular';
+import { NavController} from '@ionic/angular';
+
+
+
+interface Tarea {
+  nombreItem: string;
+  fechaItem: string; // Puedes usar 'Date' si prefieres manejarlo como fecha
+  prioridadItem: string;
+  categoriaItem: string;
+}
 
 @Component({
   selector: 'app-tareas',
   templateUrl: './tareas.page.html',
   styleUrls: ['./tareas.page.scss'],
 })
+
+
+
 export class TareasPage implements OnInit {
 
-  todoList = [{
+  menuCtrl = inject(MenuController);
+  NavController = inject(NavController);
+
+
+  todoList: Tarea[] = [];
+
+  
+  /*[{
     //ITEM 1
     name: 'Desarrollo de App Moviles',
     date: '09-08-2024',
@@ -51,6 +72,7 @@ export class TareasPage implements OnInit {
 
 
 ]
+ */ 
   //Se almacena la fecha actual que tenemos
   fechaActual : number = Date.now();
 
@@ -60,18 +82,40 @@ export class TareasPage implements OnInit {
   }
 
   //METODO PARA AGREGAR TAREAS
-  async agregarTareas(){
-    const modal = await this.modalCtrl.create({
+// Métodos en TareasPage
+async agregarTareas() {
+  const modal = await this.modalCtrl.create({
+    component: AgregarNuevaTareaPage,
+  });
 
-      component: AgregarNuevaTareaPage
-    })
+  modal.onDidDismiss().then((newTaskObject) => {
+    // Verificar que `newTaskObject.data` tenga la estructura de `Tarea`
+    if (newTaskObject.data && 'nombreItem' in newTaskObject.data && 'fechaItem' in newTaskObject.data &&
+        'prioridadItem' in newTaskObject.data && 'categoriaItem' in newTaskObject.data) {
+      this.todoList.push(newTaskObject.data as Tarea);
+    } else {
+      console.error('La nueva tarea no tiene la estructura correcta:', newTaskObject.data);
+    }
+  });
+  
 
-    modal.onDidDismiss().then(newTaskObject => {console.log(newTaskObject.data);
+  return await modal.present();
+}
 
-    })
-    //UNA VEZ SE CREA EL MODAL HACE OVERLAY
-    return await modal.present()
+
+  delete(index: number){
+
+    this.todoList.splice(index, 1)
 
   }
+
+  volver() {
+    this.NavController.back();
+  }
+  closeMenu() {
+    this.menuCtrl.close();
+  }
+  
+  
 
 }
