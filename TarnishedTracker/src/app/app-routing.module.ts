@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'attendance',
     loadChildren: () => import('./attendance/attendance.module').then( m => m.AttendancePageModule)
-  },  {
+  },
+  {
     path: 'scanner-qr',
     loadChildren: () => import('./scanner-qr/scanner-qr.module').then( m => m.ScannerQrPageModule)
   },
@@ -38,6 +39,19 @@ const routes: Routes = [
     path: 'password-recovery',
     loadChildren: () => import('./password-recovery/password-recovery.module').then( m => m.PasswordRecoveryPageModule)
   },
+  
+  {
+    path: 'tareas',
+    loadChildren: () => import('./tareas/tareas.module').then( m => m.TareasPageModule)
+  },
+  {
+    path: 'tareas',
+    loadChildren: () => import('./tareas/tareas.module').then( m => m.TareasPageModule)
+  },  {
+    path: 'agregar-nueva-tarea',
+    loadChildren: () => import('./agregar-nueva-tarea/agregar-nueva-tarea.module').then( m => m.AgregarNuevaTareaPageModule)
+  },
+
 
 
 

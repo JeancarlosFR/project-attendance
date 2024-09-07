@@ -1,0 +1,74 @@
+
+<ion-header>
+
+  
+
+
+</ion-header>
+
+<ion-toolbar> 
+  <ion-item lines="none">
+    <ion-label>
+      Hoy
+      <p>{{fechaActual | date: 'fullDate'}}</p>
+    </ion-label>
+  </ion-item>
+</ion-toolbar>
+
+<ion-content>
+
+  <ion-card *ngFor="let item of todoList" class="ion-margin">
+    <!--Se incorpora nombre de asignatura-->
+    <ion-card-header>
+      <ion-card-subtitle [style.color]="item.priority === 'Alta' ? 'red' : (item.priority === 'Baja' ? 'green' : 'yellow')">
+        {{ item.name }}
+      </ion-card-subtitle>
+    <!--Se icono y categoría | se da condición con *ngIf dependiendo de la prioridad-->
+      <ion-item>
+        <ion-icon *ngIf="item.priority === 'Alta'" color="danger" size="small" name="ellipse"></ion-icon>
+        <ion-icon *ngIf="item.priority === 'Media'" color="warning" size="small" name="ellipse"></ion-icon>
+        <ion-icon *ngIf="item.priority === 'Baja'" color="success" size="small" name="ellipse"></ion-icon>
+        <ion-label>{{item.category}}</ion-label>
+      </ion-item>
+
+    </ion-card-header>
+  <!--Se incorpora Fecha -->
+    <ion-card-content>
+      <ion-label>
+        Fecha: {{item.date | date: 'fullDate'}}
+      </ion-label>
+    </ion-card-content>
+
+    <ion-row>
+
+      <ion-item>
+        <ion-icon name="share-outline"></ion-icon>
+        <p>Compartir</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="checkmark-outline"></ion-icon>
+        <p>Completar</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="trash-outline"></ion-icon>
+        <p>Borrar</p>
+      </ion-item>
+      
+    </ion-row>
+
+    
+
+
+  </ion-card>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="agregarTareas()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+
+
+</ion-content>
