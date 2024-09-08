@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { TareasPage } from '../tareas/tareas.page';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-agregar-nueva-tarea',
@@ -8,6 +9,8 @@ import { TareasPage } from '../tareas/tareas.page';
   styleUrls: ['./agregar-nueva-tarea.page.scss'],
 })
 export class AgregarNuevaTareaPage implements OnInit {
+
+  MenuController=inject(MenuController);
 
   categorias = ['trabajo', 'evaluacion', 'tarea']
 
@@ -47,6 +50,9 @@ addTarea() {
 
   // Se cierra el modal y se envía el objeto taskObject
   this.closed();
+}
+closeMenu() {
+  this.MenuController.close();
 }
 
 }
