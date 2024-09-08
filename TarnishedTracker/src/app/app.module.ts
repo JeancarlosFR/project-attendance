@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
-import { MatDividerModule } from '@angular/material/divider';
-
  
 
 
@@ -15,10 +13,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ButtonModule,MatDividerModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ButtonModule,],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideAnimationsAsync()],
   bootstrap: [AppComponent],
-  
   
   
 })
