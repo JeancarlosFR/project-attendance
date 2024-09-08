@@ -5,6 +5,8 @@
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content [fullscreen]="true">
 
   <ion-card>
@@ -36,19 +38,16 @@
     </ion-item>
 
     <ion-item>
-      <ion-chip *ngFor="let categoria of categorias; let i =index" (click)="selectCategory(i)">
-        <ion-label>{{categoria}}</ion-label>
-        
-      </ion-chip>
+      @for(categoria of categorias; track $index){
+        <ion-chip (click)="selectCategory($index)">
+          <ion-label>{{categoria}}</ion-label>
+          
+        </ion-chip>
+      }
+      
     </ion-item>
 
     <ion-button class="ion-margin" expand="block" (click)="addTarea()">Agregar Tarea</ion-button>
-
-
-
-    
-
-
 
   </ion-card>
   
