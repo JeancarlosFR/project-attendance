@@ -50,7 +50,7 @@ ion-avatar{
   display: flex;
   align-items: center;
   justify-content: center; 
-  flex: 1 1 45%; // configuración para que los botones ocupen el 45% del ancho*/
+  flex: 1 1 45%; 
   max-width: 200px; 
   min-width: 140px; 
 }
@@ -64,9 +64,9 @@ ion-avatar{
 
 .icon{
 
-  width: 30px; /* Ajusta el tamaño a lo que necesites */
+  width: 30px; 
   height: 30px;
-  color: white; /* Asegúrate de que el color sea visible */
+  color: white; 
   stroke-width: 1.5;
 }
 
