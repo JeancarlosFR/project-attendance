@@ -9,7 +9,7 @@ import { NavController} from '@ionic/angular';
 
 interface Tarea {
   nombreItem: string;
-  fechaItem: string; // Puedes usar 'Date' si prefieres manejarlo como fecha
+  fechaItem: string; 
   prioridadItem: string;
   categoriaItem: string;
 }
@@ -82,7 +82,7 @@ export class TareasPage implements OnInit {
   }
 
   //METODO PARA AGREGAR TAREAS
-// Métodos en TareasPage
+// 
 async agregarTareas() {
   const modal = await this.modalCtrl.create({
     component: AgregarNuevaTareaPage,

@@ -25,7 +25,7 @@ ion-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;  // Espacio entre el logo y la card (puedes ajustarlo)
+    margin-bottom: 20px;  // Espacio entre el logo y la card
   
     img {
       width: 100px;   // Ajusta este valor para el tamaño deseado
@@ -51,7 +51,7 @@ ion-content {
     }
 
     input, mat-select {
-      color: black; // Color blanco para el texto ingresado
+      color: black; 
     }
 
      
@@ -62,7 +62,7 @@ ion-content {
     background-color: rgb(24, 119, 242);
     color: white;
     width: 100%;
-    padding: 1rem;  // Padding basado en el tamaño de la fuente raíz
+    padding: 1rem; 
   }
   
 

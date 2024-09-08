@@ -40,7 +40,7 @@ export class AgregarNuevaTareaPage implements OnInit {
 
  // Métodos en AgregarNuevaTareaPage
 addTarea() {
-  // Se asegura de que las propiedades estén definidas correctamente
+  // Se asegura de que las propiedades estén definidas 
   this.taskObject = {
     nombreItem: this.nombreTarea,
     fechaItem: this.fechaTarea,
