@@ -3,6 +3,8 @@ import { NavController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { lastValueFrom, timer } from 'rxjs';
 import { LoadingController } from '@ionic/angular';
+import { LoginService } from '../login.service';
+import { FirebaseAuthentication } from '@capacitor-firebase/authentication';
 
 @Component({
   selector: 'app-home',
@@ -17,19 +19,22 @@ export class HomePage {
   NavController = inject(NavController);
   toastController = inject(ToastController);
   loadSrv = inject(LoadingController);
+  loginSrv = inject(LoginService);
 
   constructor() {}
 
   ionViewWillEnter(): void {
     this.usuario = '';
     this.pass = '';
+
   }
 
   async ingresar() {
+    this.loginSrv.login(this.usuario,this.pass);
     const load = await this.loadSrv.create({
       message:'Iniciando Sesión',
       duration:3000});
-    if (this.usuario === 'admin' && this.pass === '1234') {
+    if (this.usuario == 'admin' && this.pass == '1234') {
         await load.present();
         await lastValueFrom(timer(500));
         await load.dismiss();
