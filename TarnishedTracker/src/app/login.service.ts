@@ -12,12 +12,21 @@ export class LoginService {
   nombreUsuario ='';
   usuarioActual = new BehaviorSubject<User | undefined>(undefined);
 
+  //Creamos un metodo que llamaremos cuando firebase se haya cargado
   cargarFirebase!: () => void;
   firebaseCargado = new Promise<void>((resolve)=>{
     this.cargarFirebase = resolve;
   });
 
-  constructor(){}
+  constructor() {
+
+    FirebaseAuthentication.addListener('authStateChange', async (cambio)=>{
+      this.usuarioActual.next(cambio.user!);
+      //Cuando llamemos este metodo, firebase ya estara cargado y el guard lo sabrá
+      this.cargarFirebase();
+  });
+
+}
 
   public get logeado(){
   if(this.usuarioActual.value){
